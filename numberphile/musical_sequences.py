@@ -1,6 +1,8 @@
 
-from mido import Message, MidiFile, MidiTrack
+#Inspiration: https://www.youtube.com/watch?v=FGC5TdIiT9U&t=523s
+#More on integer sequences: https://oeis.org/ "The On-Line Encyclopedia of Integer Sequences"
 
+from mido import Message, MidiFile, MidiTrack
 
 def timer(func):
     import time
@@ -73,6 +75,6 @@ def GeestSequence(num_steps=1000):
 
 
 if __name__=='__main__':
-    generate_midi_seq(file_name='recaman_tushar.mid', seq=recamanSequence)
-    generate_midi_seq(file_name='fib.mid', seq=fibonacci)
-    generate_midi_seq(file_name='geest.mid', seq=GeestSequence, num_steps=60)
+    generate_midi_seq(file_name='music/recaman.mid', seq=recamanSequence)
+    generate_midi_seq(file_name='music/fib.mid', seq=fibonacci)
+    generate_midi_seq(file_name='music/geest.mid', seq=GeestSequence, num_steps=60)
