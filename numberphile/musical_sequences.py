@@ -91,6 +91,12 @@ def GeestSequenceOpt(num_steps=1000):
         seq.append(nxt)
     return seq
 
+def randomSequence(num_steps=1000):
+    seq=[]
+    import random
+    for _ in range(num_steps):
+        seq.append(random.randint(0, 84))
+    return seq
 
 def generate_midi_seq_geest(seq, file_name, num_steps = 1000):
     # Pure sequence
@@ -106,7 +112,8 @@ def generate_midi_seq_geest(seq, file_name, num_steps = 1000):
 
 
 if __name__=='__main__':
-    generate_midi_seq(file_name='music/recaman.mid', seq=recamanSequence)
-    generate_midi_seq(file_name='music/fib.mid', seq=fibonacci)
-    generate_midi_seq(file_name='music/geest.mid', seq=GeestSequence, num_steps=60)
-    generate_midi_seq_geest(file_name='music/geest_opt.mid', seq=GeestSequenceOpt, num_steps=2000)
+    # generate_midi_seq(file_name='music/recaman.mid', seq=recamanSequence)
+    # generate_midi_seq(file_name='music/fib.mid', seq=fibonacci)
+    # generate_midi_seq(file_name='music/geest.mid', seq=GeestSequence, num_steps=60)
+    # generate_midi_seq_geest(file_name='music/geest_opt.mid', seq=GeestSequenceOpt, num_steps=2000)
+    generate_midi_seq(file_name='music/random.mid', seq=randomSequence, num_steps=1000)
